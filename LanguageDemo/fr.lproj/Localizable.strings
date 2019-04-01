@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  LanguageDemo
+
+  Created by Rakesh Kumar on 01/04/19.
+  Copyright © 2019 Rakesh Kumar. All rights reserved.
+*/
+
+"How to change the language inside of the app." = "Comment changer la langue à l'intérieur de l'application.";
