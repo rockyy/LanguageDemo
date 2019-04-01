@@ -31,8 +31,8 @@ class RKLocalization: NSObject {
     
     // get localizedString from bundle of selected language
     func localizedString(forKey key: String, value comment: String) -> String {
-        let localozed = bundle!.localizedString(forKey: key, value: comment, table: nil)
-        return localozed
+        let localized = bundle!.localizedString(forKey: key, value: comment, table: nil)
+        return localized
     }
     
     // set language for localization
@@ -65,27 +65,7 @@ class RKLocalization: NSObject {
         }
         return nil
     }
-    
-    // get and load bundle on basis of selected language
-    func languageSelectedString(forKey key: String) -> String {
-        var path: String
-        if (getLanguage() == "en") {
-            path = Bundle.main.path(forResource: "en", ofType: "lproj")!
-        }
-        else if (getLanguage() == "zh-Hans") {
-            path = Bundle.main.path(forResource: "zh-Hans", ofType: "lproj")!
-        }
-        else if (getLanguage() == "fr") {
-            path = Bundle.main.path(forResource: "fr", ofType: "lproj")!
-        }
-        else {
-            path = Bundle.main.path(forResource: "en", ofType: "lproj")!
-        }
-        
-        let languageBundle = Bundle(path: path)
-        let languageBundleString = languageBundle?.localizedString(forKey: key, value: "", table: nil)        
-        return languageBundleString!
-    }
+  
 }
 
 // LocalizedString to get string in selected language
